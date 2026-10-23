@@ -1442,3 +1442,452 @@ html {
   .section-nav a { padding: 0.75rem 0.9rem; font-size: 0.9rem; }
   .collection-section { padding: 3rem 0 4.5rem; }
 }
+
+
+
+
+
+
+/* ✨ SIGNATURE TEAS + COMING SOON FEATURE IMAGES */
+.signatureteas,
+.coming-soon {
+  max-width: 700px;
+  margin: 2rem auto 3rem;
+  padding: 0.8rem;
+  border-radius: 30px;
+  background: rgba(20, 16, 28, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 0 28px rgba(212, 175, 55, 0.18);
+}
+
+.signatureteas img,
+.coming-soon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 22px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+
+/* subtle magical hover */
+.signatureteas img:hover,
+.coming-soon img:hover {
+  transform: scale(1.02);
+}
+
+
+
+
+@media (max-width: 700px) {
+  .signatureteas img,
+  .coming-soon img {
+    height: 280px;
+  }
+}
+
+
+
+/* ========================================
+   TASTY CAULDRON — HAIR OIL COLLECTION
+======================================== */
+
+.hair-oil-section {
+  position: relative;
+}
+
+
+/* HOUSE OIL GRID */
+
+.hair-oil-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hair-oil-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.hair-oil-card .add-btn {
+  margin-top: auto;
+}
+
+.oil-subtitle {
+  color: var(--gold);
+  font-weight: 600;
+  margin-top: -0.25rem;
+  margin-bottom: 1rem;
+}
+
+.oil-note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+
+/* ========================================
+   PERSONAL POTION BUILDER
+======================================== */
+
+.custom-hair-oil {
+  max-width: 1000px;
+  margin: 4rem auto 0;
+  padding: clamp(1.5rem, 4vw, 3rem);
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(161, 109, 220, 0.14),
+      transparent 45%
+    ),
+    rgba(20, 16, 28, 0.82);
+
+  border: 1px solid rgba(161, 109, 220, 0.32);
+  border-radius: 30px;
+
+  box-shadow:
+    var(--shadow),
+    0 0 35px rgba(161, 109, 220, 0.12);
+}
+
+
+/* BUILDER HEADING */
+
+.custom-oil-heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem;
+}
+
+.custom-oil-heading h2 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+}
+
+.custom-oil-heading > p:not(.eyebrow):not(.custom-price):not(.vitamin-e-note) {
+  color: #eadfcf;
+  line-height: 1.7;
+}
+
+.custom-oil-heading .custom-price {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  font-weight: 700;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.vitamin-e-note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
+/* BUILDER GROUPS */
+
+.oil-builder-group {
+  margin-top: 2.5rem;
+}
+
+.oil-builder-group h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.builder-instruction {
+  color: var(--muted);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+
+/* ========================================
+   CARRIER OIL + HERB OPTIONS
+======================================== */
+
+.carrier-oil-options,
+.hair-herb-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.carrier-oil-options label,
+.hair-herb-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  padding: 0.9rem 1rem;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+
+  color: #eadfcf;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.carrier-oil-options label:hover,
+.hair-herb-options label:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(200, 154, 85, 0.4);
+
+  background: rgba(200, 154, 85, 0.06);
+
+  box-shadow: 0 0 15px rgba(200, 154, 85, 0.08);
+}
+
+
+/* CHECKBOXES + RADIO BUTTONS */
+
+.carrier-oil-options input,
+.hair-herb-options input {
+  accent-color: var(--plum);
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   BUILDER MESSAGE
+======================================== */
+
+.hair-oil-message {
+  text-align: center;
+  margin: 2rem 0 1rem;
+
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
+/* ========================================
+   CUSTOM POTION BUTTON
+======================================== */
+
+.custom-hair-oil-button {
+  display: block;
+
+  width: min(100%, 420px);
+
+  margin: 1rem auto 0;
+
+  border: none;
+
+  padding: 1rem 1.4rem;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 1rem;
+
+  color: #0b0a0f;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      #f0c57b
+    );
+
+  box-shadow:
+    0 12px 30px rgba(200, 154, 85, 0.26);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.custom-hair-oil-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 18px 34px rgba(200, 154, 85, 0.36);
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 820px) {
+
+  .hair-oil-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carrier-oil-options,
+  .hair-herb-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 520px) {
+
+  .carrier-oil-options,
+  .hair-herb-options {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-hair-oil {
+    padding: 1.4rem;
+  }
+
+}
+
+
+/* ========================================
+   HAIR OIL FEATURE IMAGE
+======================================== */
+
+.hair-oil-banner {
+  width: min(100%, 760px);
+  margin: 0 auto 2.75rem;
+}
+
+.hair-oil-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(137, 245, 110, 0.22);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.45),
+    0 0 28px rgba(137, 245, 110, 0.14);
+}
+
+
+
+
+/* =========================================
+   THE COOKIE COVEN
+========================================= */
+
+.cookie-coven-section {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.cookie-coven-section .section-heading h2 {
+  color: #f5d77b;
+  text-shadow: 0 0 22px rgba(200, 154, 85, 0.28);
+}
+
+.cookie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.cookie-card {
+  border: 1px solid rgba(200, 154, 85, 0.25);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.cookie-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 154, 85, 0.65);
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(200, 154, 85, 0.2);
+}
+
+.cookie-card h3 {
+  color: #f7e5b5;
+}
+
+.cookie-flavor {
+  color: #cfa7ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.cookie-card .product-price {
+  margin-top: auto;
+  color: #ffd970;
+  font-size: 1.1rem;
+}
+
+.cookie-card .add-btn {
+  margin-top: 0.5rem;
+}
+
+/* FUTURE SPECIALTY COOKIES */
+
+.cookie-coming-soon {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(25, 10, 40, 0.65);
+  border: 1px solid rgba(200, 154, 85, 0.35);
+  border-radius: 24px;
+  box-shadow: 0 0 24px rgba(200, 154, 85, 0.12);
+}
+
+.cookie-coming-soon span {
+  font-family: 'Cinzel', serif;
+  color: #f5d77b;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cookie-coming-soon p {
+  color: #eadfcf;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* TABLETS */
+
+@media (max-width: 900px) {
+  .cookie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 700px) {
+  .cookie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cookie-coven-section {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .cookie-coming-soon {
+    padding: 1.5rem;
+  }
+}
